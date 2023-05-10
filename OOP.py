@@ -6,6 +6,12 @@ class Student():
         self.finished_courses = []
         self.courses_in_progress = []
         self.grades = {}
+    
+    def lt (self, other_student):
+        if isinstance(other_student, Student):
+            return sr_grade(self.grades) < sr_grade(other_student.grades)
+        else:
+            return None
 
     def rate_lec(self, lecturer, course, grade):
         if isinstance(lecturer, Lecturer) and course in (
